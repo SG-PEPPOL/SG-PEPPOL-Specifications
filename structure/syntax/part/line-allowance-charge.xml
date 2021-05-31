@@ -90,7 +90,7 @@
             <Term>cbc:BaseAmount</Term>
             <Name>Line level allowance or charge base amount</Name>
             <Description>The base amount that may be used, in conjunction with the line level allowance or charge percentage, to
-                calculate the line level allowance or charge amount. Must be rounded to maximum 2 decimals
+                calculate the line level allowance or charge amount. 
             </Description>
             <DataType>Amount</DataType>
             <Reference type="BUSINESS_TERM">BT-137,BT-142</Reference>
