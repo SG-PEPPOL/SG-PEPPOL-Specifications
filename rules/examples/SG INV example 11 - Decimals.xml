@@ -100,10 +100,10 @@ Invoice demonstrating amounts with multiple decimals which are carried through t
         </cac:TaxCategory>
     </cac:AllowanceCharge>
 	<cac:TaxTotal>
-		<cbc:TaxAmount currencyID="SGD">67.20637525</cbc:TaxAmount> <!-- BT-110 -->
+		<cbc:TaxAmount currencyID="SGD">67.21</cbc:TaxAmount> <!-- BT-110 -->
 		<cac:TaxSubtotal>
-			<cbc:TaxableAmount currencyID="SGD">960.091075</cbc:TaxableAmount> <!-- BT-116 -->
-			<cbc:TaxAmount currencyID="SGD">67.20637525</cbc:TaxAmount> <!-- BT-117 -->
+			<cbc:TaxableAmount currencyID="SGD">960.09</cbc:TaxableAmount> <!-- BT-116 -->
+			<cbc:TaxAmount currencyID="SGD">67.21</cbc:TaxAmount> <!-- BT-117 -->
 			<cac:TaxCategory>
 				<cbc:ID>SR</cbc:ID> <!-- BT-118 -->
 				<cbc:Percent>7</cbc:Percent> <!-- BT-119 -->
