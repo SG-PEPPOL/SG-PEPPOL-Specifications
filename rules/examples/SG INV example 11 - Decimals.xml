@@ -114,9 +114,9 @@ Invoice demonstrating amounts with multiple decimals which are carried through t
 		</cac:TaxSubtotal>
 	</cac:TaxTotal>
 	<cac:LegalMonetaryTotal>
-		<cbc:LineExtensionAmount currencyID="SGD">860.091075</cbc:LineExtensionAmount> <!-- BT-106 -->
-		<cbc:TaxExclusiveAmount currencyID="SGD">960.091075</cbc:TaxExclusiveAmount> <!-- BT-109 -->
-		<cbc:TaxInclusiveAmount currencyID="SGD">1027.29745025</cbc:TaxInclusiveAmount> <!-- BT-112 -->
+		<cbc:LineExtensionAmount currencyID="SGD">860.09</cbc:LineExtensionAmount> <!-- BT-106 -->
+		<cbc:TaxExclusiveAmount currencyID="SGD">960.09</cbc:TaxExclusiveAmount> <!-- BT-109 -->
+		<cbc:TaxInclusiveAmount currencyID="SGD">1027.29</cbc:TaxInclusiveAmount> <!-- BT-112 -->
 		<cbc:ChargeTotalAmount currencyID="SGD">100.00</cbc:ChargeTotalAmount> <!-- BT-108 -->
 		<cbc:PayableRoundingAmount currencyID="SGD">0.0</cbc:PayableRoundingAmount> <!-- BT-114 -->
 		<cbc:PayableAmount currencyID="SGD">1027.30</cbc:PayableAmount> <!-- BT-115 -->
