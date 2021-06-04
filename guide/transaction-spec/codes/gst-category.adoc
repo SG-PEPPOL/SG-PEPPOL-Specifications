@@ -12,7 +12,7 @@ Valid values are listed in the table below:
 |===
 | Type of supply | Code | Description | Rate
 
-.3+.^| Standard rated
+.5+.^| Standard rated
 | SR
 | Local supply of goods and services
 | 7%
@@ -23,6 +23,16 @@ Valid values are listed in the table below:
 
 | SRCA-C
 | Customer accounting supply made by the customer on supplier’s behalf
+| 7%
+
+| Overseas Vendor Registration, digital services
+| SROVR
+| Overseas vendor registration regime for Business-to-Consumer (“B2C”) supplies of imported digital services
+| 7%
+
+| Reverse Charge
+| SRRC
+| Reverse charge regime for Business-to-Business (“B2B”) supplies of imported services
 | 7%
 
 | Zero rated
@@ -52,16 +62,6 @@ Valid values are listed in the table below:
 | Supplies from Non GST registered company
 | NG
 | Supplies from a company which is not registered for GST
-| N/A
-
-| Overseas Vendor Registration, digital services
-| SROVR
-| Overseas vendor registration regime for Business-to-Consumer (“B2C”) supplies of imported digital services
-| N/A
-
-| Reverse Charge
-| SRRC
-| Reverse charge regime for Business-to-Business (“B2B”) supplies of imported services
 | N/A
 |===
 
