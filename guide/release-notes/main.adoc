@@ -9,6 +9,8 @@ openPEPPOL AISBL <http://www.peppol.eu/>
 :title-logo-image: peppol.png
 
 :leveloffset: +1
+include::v3.0.7.adoc[]
+
 include::v3.0.6.adoc[]
 
 include::v3.0.5.adoc[]

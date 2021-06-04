@@ -1,0 +1,29 @@
+= Version 3.0.7
+[horizontal]
+Release date:: 2021-06-10
+
+== Changes to BIS document
+
+== Changes to validation artefacts
+
+* Added ICD identifier scheme codes 210, 211, 212, 213
+* Restrictions to two decimals imposed on
+** cac:AllowanceCharge
+*** Amount
+*** BaseAmount
+cac:TaxTotal
+ / cbc:TaxAmount
+cac:TaxTotal
+ / cac:TaxSubtotal
+ / cbc:TaxableAmount
+cac:TaxTotal / cac:TaxSubtotal
+ / cbc:TaxAmount
+cac:LegalMonetaryTotal / cbc:LineExtensionAmount
+cac:LegalMonetaryTotal / cbc:TaxExclusiveAmount
+cac:LegalMonetaryTotal / cbc:TaxInclusiveAmount
+cac:LegalMonetaryTotal / cbc:AllowanceTotalAmount
+cac:LegalMonetaryTotal / cbc:ChargeTotalAmount
+cac:LegalMonetaryTotal / cbc:PrepaidAmount
+cac:LegalMonetaryTotal / cbc:PayableRoundingAmount
+cac:LegalMonetaryTotal / cbc:PayableAmount
+
