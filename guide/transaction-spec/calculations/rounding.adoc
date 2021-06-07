@@ -1,13 +1,23 @@
 
 = Rounding
 
+The following amounts shall be rounded to 2 decimals:
 
-To minimize the risk of differences due to rounding, the following rules apply:
-
-[IMPORTANT]
-====
-* Amounts do not need to be roundes and can have unlimited decimals, with the following expemption.
-** Invoice Payable amount (BT-115) shall be rounded to two decimals
-====
+* AllowanceCharge / Amount
+* AllowanceCharge / BaseAmount
+* TaxTotal / TaxAmount
+* TaxTotal / TaxSubtotal / TaxableAmount
+* TaxTotal / TaxSubtotal / TaxAmount
+* LegalMonetaryTotal / LineExtensionAmount
+* LegalMonetaryTotal / TaxExclusiveAmount
+* LegalMonetaryTotal / TaxInclusiveAmount
+* LegalMonetaryTotal / AllowanceTotalAmount
+* LegalMonetaryTotal / ChargeTotalAmount
+* LegalMonetaryTotal / PrepaidAmount
+* LegalMonetaryTotal / PayableRoundingAmount
+* LegalMonetaryTotal / PayableAmount
+* InvoiceLine / LineExtensionAmount
+* InvoiceLine / AllowanceCharge / Amount
+* InvoiceLine / AllowanceCharge / BaseAmount
 
 Please also see <<Calculation>> for details on how to calculate the different amounts.
