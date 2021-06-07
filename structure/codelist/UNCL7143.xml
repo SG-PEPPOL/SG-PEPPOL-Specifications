@@ -5,10 +5,11 @@
     <Version>D.19A</Version>
     <Agency>UN/CEFACT</Agency>
 
-     <Code>
+    <Code>
         <Id>AA</Id>
         <Name>Product version number</Name>
-        <Description>Number assigned by manufacturer or seller to identify the release of a product.</Description>
+        <Description>Number assigned by manufacturer or seller to identify the release of a
+            product.</Description>
     </Code>
     <Code>
         <Id>AB</Id>
@@ -890,7 +891,11 @@
         <Name>UNSPSC</Name>
         <Description>The UNSPSC commodity classification system.</Description>
     </Code>
-
+    <Code>
+        <Id>TSU</Id>
+        <Name>EU RoHS Directive</Name>
+        <Description>European Union Directive on the restriction of hazardous substances.</Description>
+    </Code>
     <Code>
         <Id>UA</Id>
         <Name>Ultimate customer's article number</Name>

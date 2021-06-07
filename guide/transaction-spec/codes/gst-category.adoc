@@ -25,12 +25,10 @@ Valid values are listed in the table below:
 | Customer accounting supply made by the customer on supplier’s behalf
 | 7%
 
-| Overseas Vendor Registration, digital services
 | SROVR
 | Overseas vendor registration regime for Business-to-Consumer (“B2C”) supplies of imported digital services
 | 7%
 
-| Reverse Charge
 | SRRC
 | Reverse charge regime for Business-to-Business (“B2B”) supplies of imported services
 | 7%

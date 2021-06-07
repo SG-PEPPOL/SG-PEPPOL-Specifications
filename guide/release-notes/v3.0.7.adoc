@@ -3,13 +3,13 @@
 Release date:: 2021-06-10
 
 == Changes to BIS document
-* GST rate of 7% applied to calculation in categories SROVR and SRRC 
+* GST rate of 7% applied to calculation in categories SROVR and SRRC
+* Code lists aligned with Peppol BIS Billing 3.0
 
 == Changes to validation artefacts
-* Rule BR-CO-15 corrected to allow for TaxAmount in local currency.
-* Rule BR-CO-17 correction of rounding in negative invoices. 
+* Rule BR-CO-15 corrected to allow TaxAmount in local currency.
 * UoM code NM3 added to validation artefacts.
-* Added ICD identifier scheme codes 210, 211, 212, 213
-* Restrictions to two decimals imposed on amounts
-* GST rate of 7% applied to calculation in categories SROVR and SRRC 
+* Added ICD and EAS identifier scheme codes 210, 211, 212, 213.
+* Restrictions to two decimals imposed on some amounts.
+* Overall alignment of schematron rules between SG Billing and Peppol BIS Billing 3.0.
 

@@ -5,64 +5,78 @@
     <Identifier>UNCL5305</Identifier>
     <Version>D.16B</Version>
     <Agency>UN/CEFACT</Agency>
-    <Subset>OpenPEPPOL, IMDA</Subset>
-
-
+    <Subset>OpenPEPPOL</Subset>
 
     <Code>
-        <Id>SR</Id>
-        <Name>Standard rated</Name>
-        <Description>Local supply of goods and services</Description>
-    </Code>
-    <Code>
-        <Id>SRCA-S</Id>
-        <Name>Standard rated</Name>
-        <Description>Customer accounting supply made by the supplier	</Description>
-    </Code>
-    <Code>
-        <Id>SRCA-C</Id>
-        <Name>Standard rated</Name>
-        <Description>Customer accounting supply made by the customer on supplier’s behalf</Description>
+        <Id>AE</Id>
+        <Name>Vat Reverse Charge</Name>
+        <Description>Code specifying that the standard VAT rate is levied from the invoicee.</Description>
     </Code>
 
     <Code>
-        <Id>ZR</Id>
-        <Name>Zero rated</Name>
-        <Description>Supplies involving goods for export/ provision of international services</Description>
+        <Id>E</Id>
+        <Name>Exempt from Tax</Name>
+        <Description>Code specifying that taxes are not applicable.</Description>
+    </Code>
+
+    <Code>
+        <Id>S</Id>
+        <Name>Standard rate</Name>
+        <Description>Code specifying the standard rate.</Description>
+    </Code>
+
+    <Code>
+        <Id>Z</Id>
+        <Name>Zero rated goods</Name>
+        <Description>Code specifying that the goods are at a zero rate.</Description>
+    </Code>
+
+    <Code>
+        <Id>G</Id>
+        <Name>Free export item, VAT not charged</Name>
+        <Description>Code specifying that the item is free export and taxes
+            are not charged.</Description>
+    </Code>
+
+    <Code>
+        <Id>O</Id>
+        <Name>Services outside scope of tax</Name>
+        <Description>Code specifying that taxes are not applicable to the
+            services.</Description>
     </Code>
     <Code>
-        <Id>ES33</Id>
-        <Name>Exempt</Name>
-        <Description>Specific categories of exempt supplies listed under regulation 33 of the GST (General) Regulations</Description>
+        <Id>K</Id>
+        <Name>VAT exempt for EEA intra-community supply of goods and
+            services</Name>
+        <Description>A tax category code indicating the item is VAT exempt
+            due to an intra-community supply in the European
+            Economic Area.</Description>
     </Code>
+    
     <Code>
-        <Id>ESN33</Id>
-        <Name>Exempt</Name>
-        <Description>Exempt supplies other than those listed under regulation 33 of the GST (General) Regulations	</Description>
+        <Id>L</Id>
+        <Name>Canary Islands general indirect tax</Name>
+        <Description>Impuesto General Indirecto Canario (IGIC) is an indirect
+            tax levied on goods and services supplied in the Canary
+            Islands (Spain) by traders and professionals, as well as
+            on import of goods.</Description>
     </Code>
+    
     <Code>
-        <Id>DS</Id>
-        <Name>Deemed supplies</Name>
-        <Description>Supplies required to be reported pursuant to the GST legislation</Description>
+        <Id>M</Id>
+        <Name>Tax for production, services and importation in Ceuta and
+            Melilla</Name>
+        <Description>Impuesto sobre la Producción, los Servicios y la
+            Importación (IPSI) is an indirect municipal tax, levied
+            on the production, processing and import of all kinds of
+            movable tangible property, the supply of services and
+            the transfer of immovable property located in the cities
+            of Ceuta and Melilla.</Description>
     </Code>
-    <Code>
-        <Id>OS</Id>
-        <Name>Out-of-Scope supplies</Name>
-        <Description>Supplies outside the scope of the GST Act	</Description>
+	
+	<Code>
+        <Id>B</Id>
+        <Name>Transferred (VAT), In Italy</Name>
+        <Description>VAT not to be paid to the issuer of the invoice but directly to relevant tax authority. This code 		is allowed in the EN 16931 for Italy only based on the Italian A-deviation.</Description>
     </Code>
-    <Code>
-        <Id>NG</Id>
-        <Name>Supplies from Non GST registered company</Name>
-        <Description>Supplies from a company which is not registered for GST</Description>
-    </Code>
-    <Code>
-        <Id>SROVR</Id>
-        <Name>Overseas Vendor Registration, digital services</Name>
-        <Description>Overseas vendor registration regime for Business-to-Consumer (“B2C”) supplies of imported digital services</Description>
-    </Code>
-    <Code>
-        <Id>SRRC</Id>
-        <Name>Reverse Charge</Name>
-        <Description>Reverse charge regime for Business-to-Business (“B2B”) supplies of imported services</Description>
-    </Code>    
 </CodeList>
