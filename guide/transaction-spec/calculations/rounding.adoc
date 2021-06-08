@@ -1,7 +1,7 @@
 
 = Rounding
 
-The following amounts shall be rounded to 2 decimals:
+The following amounts shall be rounded to 2 decimals in both the Invoice and the Credit Note:
 
 * AllowanceCharge / Amount
 * AllowanceCharge / BaseAmount
@@ -16,8 +16,5 @@ The following amounts shall be rounded to 2 decimals:
 * LegalMonetaryTotal / PrepaidAmount
 * LegalMonetaryTotal / PayableRoundingAmount
 * LegalMonetaryTotal / PayableAmount
-* InvoiceLine / LineExtensionAmount
-* InvoiceLine / AllowanceCharge / Amount
-* InvoiceLine / AllowanceCharge / BaseAmount
 
 Please also see <<Calculation>> for details on how to calculate the different amounts.
