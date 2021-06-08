@@ -15,8 +15,8 @@
             <Reference type="BUSINESS_TERM">BT-110-GST, BT-111-GST</Reference>
             <Reference type="RULE">BR-53-GST-SG</Reference>
             <Reference type="RULE">BR-CO-14-GST-SG</Reference>
-            <Reference type="RULE">BR-DEC-13</Reference>
-            <Reference type="RULE">BR-DEC-15</Reference> 
+            <Reference type="RULE">BR-DEC-13-GST-SG</Reference>
+            <Reference type="RULE">BR-DEC-15-GST-SG</Reference> 
                         
             <Attribute>
                 <Term>currencyID</Term>
@@ -58,7 +58,7 @@
                 <DataType>Amount</DataType>
                 <Reference type="BUSINESS_TERM">BT-116-GST</Reference>
                 <Reference type="RULE">BR-45-GST-SG</Reference>
-                <Reference type="RULE">BR-DEC-19</Reference>                
+                <Reference type="RULE">BR-DEC-19-GST-SG</Reference>                
                 
                 <Attribute>
                     <Term>currencyID</Term>
@@ -80,7 +80,7 @@
                 <Reference type="BUSINESS_TERM">BT-117-GST</Reference>
                 <Reference type="RULE">BR-46-GST-SG</Reference>
                 <Reference type="RULE">BR-CO-17-GST-SG</Reference>
-                <Reference type="RULE">BR-DEC-20</Reference>                
+                <Reference type="RULE">BR-DEC-20-GST-SG</Reference>                
                 
                 <Attribute>
                     <Term>currencyID</Term>

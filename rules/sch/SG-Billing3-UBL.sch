@@ -32,7 +32,9 @@
       <assert test="((cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and (round(xs:decimal(cbc:TaxExclusiveAmount) * 10 * 10) div 100 = round((xs:decimal(cbc:LineExtensionAmount) + xs:decimal(cbc:ChargeTotalAmount) - xs:decimal(cbc:AllowanceTotalAmount)) * 10 * 10) div 100 ))  or (not(cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and (round(xs:decimal(cbc:TaxExclusiveAmount) * 10 * 10) div 100 = round((xs:decimal(cbc:LineExtensionAmount) - xs:decimal(cbc:AllowanceTotalAmount)) * 10 * 10 ) div 100)) or ((cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and (round(xs:decimal(cbc:TaxExclusiveAmount) * 10 * 10) div 100 = round((xs:decimal(cbc:LineExtensionAmount) + xs:decimal(cbc:ChargeTotalAmount)) * 10 * 10 ) div 100)) or (not(cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and (xs:decimal(cbc:TaxExclusiveAmount) = xs:decimal(cbc:LineExtensionAmount)))" flag="fatal" id="BR-CO-13-GST-SG">[BR-CO-13-GST-SG]-Invoice total amount without GST (BT-109-GST) = Σ Invoice line net amount (BT-131) - Sum of allowances on document level (BT-107) + Sum of charges on document level (BT-108).</assert>
       <assert test="((cbc:PrepaidAmount) and not((cbc:PayableRoundingAmount)) and (round(xs:decimal(cbc:PayableAmount) * 10 * 10) div 100 = (round((xs:decimal(cbc:TaxInclusiveAmount) - xs:decimal(cbc:PrepaidAmount)) * 10 * 10) div 100))) or (not((cbc:PrepaidAmount)) and not((cbc:PayableRoundingAmount)) and xs:decimal(cbc:PayableAmount) = xs:decimal(cbc:TaxInclusiveAmount)) or ((cbc:PrepaidAmount) and (cbc:PayableRoundingAmount) and ((round((xs:decimal(cbc:PayableAmount) - xs:decimal(cbc:PayableRoundingAmount)) * 10 * 10) div 100) = (round((xs:decimal(cbc:TaxInclusiveAmount) - xs:decimal(cbc:PrepaidAmount)) * 10 * 10) div 100))) or (not((cbc:PrepaidAmount)) and (cbc:PayableRoundingAmount) and ((round((xs:decimal(cbc:PayableAmount) - xs:decimal(cbc:PayableRoundingAmount)) * 10 * 10) div 100) = round(xs:decimal(cbc:TaxInclusiveAmount) * 10 * 10) div 100)) " flag="fatal" id="BR-CO-16-GST-SG">[BR-CO-16-GST-SG]-Amount due for payment (BT-115) = Invoice total amount with GST (BT-112-GST-SG) -Paid amount (BT-113) +Rounding amount (BT-114).</assert>
 
-
+      <assert id="BR-DEC-12-GST-SG" flag="fatal" test="string-length(substring-after(cbc:TaxExclusiveAmount,'.'))&lt;=2">[BR-DEC-12-GST-SG]-The allowed maximum number of decimals for the Invoice total amount without GST (BT-109-GST) is 2.</assert>
+      <assert id="BR-DEC-14-GST-SG" flag="fatal" test="string-length(substring-after(cbc:TaxInclusiveAmount,'.'))&lt;=2">[BR-DEC-14-GST-SG]-The allowed maximum number of decimals for the Invoice total amount with GST (BT-112-GST) is 2.</assert>
+      
       <assert id="BR-CO-10-SG" flag="fatal" test="(round(xs:decimal(cbc:LineExtensionAmount) * 10 * 10) div 100 = (round(sum(//(cac:InvoiceLine|cac:CreditNoteLine)/xs:decimal(cbc:LineExtensionAmount)) * 10 * 10) div 100))">[BR-CO-10-SG]-Sum of Invoice line net amount (BT-106) = Σ Invoice line net amount (BT-131).</assert>
       <assert id="BR-CO-11-SG" flag="fatal" test="round(xs:decimal(cbc:AllowanceTotalAmount) * 10 * 10) div 100 = (round(sum(../cac:AllowanceCharge[cbc:ChargeIndicator=false()]/xs:decimal(cbc:Amount)) * 10 * 10) div 100) or  (not(cbc:AllowanceTotalAmount) and not(../cac:AllowanceCharge[cbc:ChargeIndicator=false()]))">[BR-CO-11-SG]-Sum of allowances on document level (BT-107) = Σ Document level allowance amount (BT-92).</assert>
       <assert id="BR-CO-12-SG" flag="fatal" test="round(xs:decimal(cbc:ChargeTotalAmount) * 10 * 10) div 100 = (round(sum(../cac:AllowanceCharge[cbc:ChargeIndicator=true()]/xs:decimal(cbc:Amount)) * 10 * 10) div 100) or (not(cbc:ChargeTotalAmount) and not(../cac:AllowanceCharge[cbc:ChargeIndicator=true()]))">[BR-CO-12-SG]-Sum of charges on document level (BT-108) = Σ Document level charge amount (BT-99).</assert>
@@ -84,6 +86,11 @@
     </rule>
     <rule context="cac:InvoiceLine | cac:CreditNoteLine">
       <assert test="(count(cac:Item/cac:ClassifiedTaxCategory/cbc:TaxExemptionReason) &lt;= 1)" flag="warning" id="UBL-SR-38-GST-SG">[UBL-SR-38-GST-SG]-Invoiced item GST exemption reason text shall occur maximum once</assert>
+
+      <assert id="BR-DEC-13-GST-SG" flag="fatal" test="(//cac:TaxTotal/cbc:TaxAmount[@currencyID = cbc:DocumentCurrencyCode] and (string-length(substring-after(//cac:TaxTotal/cbc:TaxAmount[@currencyID = cbc:DocumentCurrencyCode],'.'))&lt;=2)) or (not(//cac:TaxTotal/cbc:TaxAmount[@currencyID = cbc:DocumentCurrencyCode]))">[BR-DEC-13-GST-SG]-The allowed maximum number of decimals for the Invoice total GST amount (BT-110-GST) is 2.</assert>
+      <assert id="BR-DEC-15-GST-SG" flag="fatal" test="(//cac:TaxTotal/cbc:TaxAmount[@currencyID = cbc:TaxCurrencyCode] and (string-length(substring-after(//cac:TaxTotal/cbc:TaxAmount[@currencyID = cbc:TaxCurrencyCode],'.'))&lt;=2)) or (not(//cac:TaxTotal/cbc:TaxAmount[@currencyID = cbc:TaxCurrencyCode]))">[BR-DEC-15-GST-SG]-The allowed maximum number of decimals for the Invoice total GST amount in accounting currency (BT-111-GST) is 2.</assert>
+      
+      
     </rule>
     <rule context="cac:TaxRepresentativeParty">
       <assert test="(count(cac:Party/cac:PartyTaxScheme/cbc:CompanyID) &lt;= 1)" flag="warning" id="UBL-SR-23-GST-SG">[UBL-SR-23-GST-SG]-Seller tax representative GST identifier shall occur maximum once, if the Seller has a tax representative</assert>
@@ -91,6 +98,11 @@
     <rule context="cac:TaxSubtotal">
       <assert test="(count(cac:TaxCategory/cbc:TaxExemptionReason) &lt;= 1)" flag="warning" id="UBL-SR-32-SG">[UBL-SR-32-SG]-GST exemption reason text shall occur maximum once</assert>
     </rule>
+    <rule context="cac:TaxTotal/cac:TaxSubtotal">
+      <assert id="BR-DEC-19-GST-SG" flag="fatal" test="string-length(substring-after(cbc:TaxableAmount,'.'))&lt;=2">[BR-DEC-19-GST-SG]-The allowed maximum number of decimals for the GST category taxable amount (BT-116-GST) is 2.</assert>
+      <assert id="BR-DEC-20-GST-SG" flag="fatal" test="string-length(substring-after(cbc:TaxAmount,'.'))&lt;=2">[BR-DEC-20-GST-SG]-The allowed maximum number of decimals for the GST category tax amount (BT-117-GST) is 2.    </assert>
+    </rule>
+
   </pattern>
   <pattern id="Codesmodel">
     <rule context="cac:PaymentMeans/cbc:PaymentMeansCode" flag="fatal">

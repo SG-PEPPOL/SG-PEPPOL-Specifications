@@ -37,7 +37,7 @@
             <Description>The total amount of the Invoice without GST.</Description>
             <DataType>Amount</DataType>
             <Reference type="BUSINESS_TERM">BT-109-GST</Reference>
-            <Reference type="RULE">BR-DEC-12</Reference>
+            <Reference type="RULE">BR-DEC-12-GST-SG</Reference>
             <Reference type="RULE">BR-13-GST-SG</Reference>
             <Reference type="RULE">BR-CO-13-GST-SG</Reference>
 
@@ -58,7 +58,7 @@
             <Description>The total amount of the Invoice with GST.</Description>
             <DataType>Amount</DataType>
             <Reference type="BUSINESS_TERM">BT-112-GST</Reference>
-            <Reference type="RULE">BR-DEC-14</Reference>
+            <Reference type="RULE">BR-DEC-14-GST-SG</Reference>
             <Reference type="RULE">BR-14-GST-SG</Reference>
             <Reference type="RULE">BR-CO-15-GST-SG</Reference>
 

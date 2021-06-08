@@ -58,8 +58,6 @@
       <assert id="BR-DEC-09" flag="fatal" test="string-length(substring-after(cbc:LineExtensionAmount,'.'))&lt;=2">[BR-DEC-09]-The allowed maximum number of decimals for the Sum of Invoice line net amount (BT-106) is 2.</assert>
       <assert id="BR-DEC-10" flag="fatal" test="string-length(substring-after(cbc:AllowanceTotalAmount,'.'))&lt;=2">[BR-DEC-10]-The allowed maximum number of decimals for the Sum of allowanced on document level (BT-107) is 2.</assert>
       <assert id="BR-DEC-11" flag="fatal" test="string-length(substring-after(cbc:ChargeTotalAmount,'.'))&lt;=2">[BR-DEC-11]-The allowed maximum number of decimals for the Sum of charges on document level (BT-108) is 2.</assert>
-      <assert id="BR-DEC-12" flag="fatal" test="string-length(substring-after(cbc:TaxExclusiveAmount,'.'))&lt;=2">[BR-DEC-12]-The allowed maximum number of decimals for the Invoice total amount without VAT (BT-109) is 2.</assert>
-      <assert id="BR-DEC-14" flag="fatal" test="string-length(substring-after(cbc:TaxInclusiveAmount,'.'))&lt;=2">[BR-DEC-14]-The allowed maximum number of decimals for the Invoice total amount with VAT (BT-112) is 2.</assert>
       <assert id="BR-DEC-16" flag="fatal" test="string-length(substring-after(cbc:PrepaidAmount,'.'))&lt;=2">[BR-DEC-16]-The allowed maximum number of decimals for the Paid amount (BT-113) is 2.</assert>
       <assert id="BR-DEC-17" flag="fatal" test="string-length(substring-after(cbc:PayableRoundingAmount,'.'))&lt;=2">[BR-DEC-17]-The allowed maximum number of decimals for the Rounding amount (BT-114) is 2.</assert>
       <assert id="BR-DEC-18" flag="fatal" test="string-length(substring-after(cbc:PayableAmount,'.'))&lt;=2">[BR-DEC-18]-The allowed maximum number of decimals for the Amount due for payment (BT-115) is 2.  </assert>
@@ -78,8 +76,6 @@
       <assert id="BR-66" flag="fatal" test="count(cac:PaymentMeans/cac:CardAccount) &lt;= 1">[BR-66]-An Invoice shall contain maximum one Payment Card account (BG-18).</assert>
       <assert id="BR-67" flag="fatal" test="count(cac:PaymentMeans/cac:PaymentMandate) &lt;= 1">[BR-67]-An Invoice shall contain maximum one Payment Mandate (BG-19).</assert>
       <assert id="BR-CO-03" flag="fatal" test="(exists(cbc:TaxPointDate) and not(cac:InvoicePeriod/cbc:DescriptionCode)) or (not(cbc:TaxPointDate) and exists(cac:InvoicePeriod/cbc:DescriptionCode)) or (not(cbc:TaxPointDate) and not(cac:InvoicePeriod/cbc:DescriptionCode))">[BR-CO-03]-Value added tax point date (BT-7) and Value added tax point date code (BT-8) are mutually exclusive.</assert>
-      <assert id="BR-DEC-13" flag="fatal" test="(//cac:TaxTotal/cbc:TaxAmount[@currencyID = cbc:DocumentCurrencyCode] and (string-length(substring-after(//cac:TaxTotal/cbc:TaxAmount[@currencyID = cbc:DocumentCurrencyCode],'.'))&lt;=2)) or (not(//cac:TaxTotal/cbc:TaxAmount[@currencyID = cbc:DocumentCurrencyCode]))">[BR-DEC-13]-The allowed maximum number of decimals for the Invoice total VAT amount (BT-110) is 2.</assert>
-      <assert id="BR-DEC-15" flag="fatal" test="(//cac:TaxTotal/cbc:TaxAmount[@currencyID = cbc:TaxCurrencyCode] and (string-length(substring-after(//cac:TaxTotal/cbc:TaxAmount[@currencyID = cbc:TaxCurrencyCode],'.'))&lt;=2)) or (not(//cac:TaxTotal/cbc:TaxAmount[@currencyID = cbc:TaxCurrencyCode]))">[BR-DEC-15]-The allowed maximum number of decimals for the Invoice total VAT amount in accounting currency (BT-111) is 2.</assert>
     </rule>
     <rule context="cac:InvoiceLine | cac:CreditNoteLine">
       <assert id="BR-21" flag="fatal" test="(cbc:ID) != ''">[BR-21]-Each Invoice line (BG-25) shall have an Invoice line identifier (BT-126).</assert>
@@ -148,10 +144,6 @@
     </rule>
     <rule context="cac:TaxRepresentativeParty/cac:PostalAddress">
       <assert id="BR-20" flag="fatal" test="(cac:Country/cbc:IdentificationCode) != ''">[BR-20]-The Seller tax representative postal address (BG-12) shall contain a Tax representative country code (BT-69), if the Seller (BG-4) has a Seller tax representative party (BG-11).</assert>
-    </rule>
-    <rule context="cac:TaxTotal/cac:TaxSubtotal">
-      <assert id="BR-DEC-19" flag="fatal" test="string-length(substring-after(cbc:TaxableAmount,'.'))&lt;=2">[BR-DEC-19]-The allowed maximum number of decimals for the VAT category taxable amount (BT-116) is 2.</assert>
-      <assert id="BR-DEC-20" flag="fatal" test="string-length(substring-after(cbc:TaxAmount,'.'))&lt;=2">[BR-DEC-20]-The allowed maximum number of decimals for the VAT category tax amount (BT-117) is 2.    </assert>
     </rule>
   </pattern>
   <pattern id="UBL-syntax">
