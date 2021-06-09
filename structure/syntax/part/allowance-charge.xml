@@ -70,7 +70,7 @@
         <Element>
             <Term>cbc:Amount</Term>
             <Name>Document level allowance or charge amount</Name>
-            <Description>The amount of an allowance or a charge, without GST
+            <Description>The amount of an allowance or a charge, without GST. Must be rounded to maximum 2 decimals. 
             </Description>
             <DataType>Amount</DataType>
             <Reference type="BUSINESS_TERM">BT-92,BT-99</Reference>
@@ -95,7 +95,7 @@
             <Term>cbc:BaseAmount</Term>
             <Name>Document level allowance or charge base amount</Name>
             <Description>The base amount that may be used, in conjunction with the document level allowance or charge percentage, to
-                calculate the document level allowance or charge amount. 
+                calculate the document level allowance or charge amount. Must be rounded to maximum 2 decimals. 
             </Description>
             <DataType>Amount</DataType>
             <Reference type="BUSINESS_TERM">BT-93,BT-100</Reference>

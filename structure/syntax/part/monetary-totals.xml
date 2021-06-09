@@ -34,7 +34,7 @@
         <Element>
             <Term>cbc:TaxExclusiveAmount</Term>
             <Name>Invoice total amount without GST</Name>
-            <Description>The total amount of the Invoice without GST.</Description>
+            <Description>The total amount of the Invoice without GST. Must be rounded to maximum 2 decimals.</Description>
             <DataType>Amount</DataType>
             <Reference type="BUSINESS_TERM">BT-109-GST</Reference>
             <Reference type="RULE">BR-DEC-12-GST-SG</Reference>
@@ -55,7 +55,7 @@
         <Element>
             <Term>cbc:TaxInclusiveAmount</Term>
             <Name>Invoice total amount with GST</Name>
-            <Description>The total amount of the Invoice with GST.</Description>
+            <Description>The total amount of the Invoice with GST. Must be rounded to maximum 2 decimals.</Description>
             <DataType>Amount</DataType>
             <Reference type="BUSINESS_TERM">BT-112-GST</Reference>
             <Reference type="RULE">BR-DEC-14-GST-SG</Reference>
@@ -76,7 +76,7 @@
         <Element cardinality="0..1">
             <Term>cbc:AllowanceTotalAmount</Term>
             <Name>Sum of allowances on document level</Name>
-            <Description>Sum of all allowances on document level in the Invoice.</Description>
+            <Description>Sum of all allowances on document level in the Invoice. Must be rounded to maximum 2 decimals.</Description>
             <DataType>Amount</DataType>
             <Reference type="BUSINESS_TERM">BT-107</Reference>
             <Reference type="RULE">BR-DEC-10</Reference>
@@ -96,7 +96,7 @@
         <Element cardinality="0..1">
             <Term>cbc:ChargeTotalAmount</Term>
             <Name>Sum of charges on document level</Name>
-            <Description>Sum of all charges on document level in the Invoice.</Description>
+            <Description>Sum of all charges on document level in the Invoice. Must be rounded to maximum 2 decimals.</Description>
             <DataType>Amount</DataType>
             <Reference type="BUSINESS_TERM">BT-108</Reference>
             <Reference type="RULE">BR-CO-12-SG</Reference>
@@ -116,7 +116,7 @@
         <Element cardinality="0..1">
             <Term>cbc:PrepaidAmount</Term>
             <Name>Paid amount</Name>
-            <Description>The sum of amounts which have been paid in advance. </Description>
+            <Description>The sum of amounts which have been paid in advance. Must be rounded to maximum 2 decimals.</Description>
             <DataType>Amount</DataType>
             <Reference type="BUSINESS_TERM">BT-113</Reference>
             <Reference type="RULE">BR-DEC-16</Reference>
@@ -136,7 +136,7 @@
         <Element cardinality="0..1">
             <Term>cbc:PayableRoundingAmount</Term>
             <Name>Rounding amount</Name>
-            <Description>The amount to be added to the invoice total to round the amount to be paid. </Description>
+            <Description>The amount to be added to the invoice total to round the amount to be paid. Must be rounded to maximum 2 decimals.</Description>
             <DataType>Amount</DataType>
             <Reference type="BUSINESS_TERM">BT-114</Reference>
             <Reference type="RULE">BR-DEC-17</Reference>
@@ -155,7 +155,7 @@
         <Element>
             <Term>cbc:PayableAmount</Term>
             <Name>Amount due for payment</Name>
-            <Description>The outstanding amount that is requested to be paid. </Description>
+            <Description>The outstanding amount that is requested to be paid. Must be rounded to maximum 2 decimals.</Description>
             <DataType>Amount</DataType>
             <Reference type="BUSINESS_TERM">BT-115</Reference>
             <Reference type="RULE">BR-15</Reference>
