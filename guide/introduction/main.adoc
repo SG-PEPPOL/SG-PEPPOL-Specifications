@@ -27,7 +27,7 @@ Rules which are unique for the Singapore BIS Billing 3.
 == Codelists
 Links to each code list being used in the specification. 
 
-== Downloads - Schematron fils
+== Downloads - Schematron files
 A zip-file containing the three groups of schematron rules.
 
 == Downloads - Presentation stylesheet
