@@ -9,7 +9,7 @@ deploy:
   access_key_id: AKIARALJXCFBKHO2JNEE
   bucket: www.peppolguide.sg
   local-dir: target/site
-#  upload-dir: draft-docs
+  #upload-dir: draft-docs
   acl: public_read
   region: ap-southeast-1
   on:
