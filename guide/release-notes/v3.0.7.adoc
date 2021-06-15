@@ -1,6 +1,6 @@
 = Version 3.0.7
 [horizontal]
-Release date:: 2021-06-10
+Release date:: 2021-06-15
 
 == Changes to BIS document
 * GST rate of 7% applied to calculation in categories SROVR and SRRC
